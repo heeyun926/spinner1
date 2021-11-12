@@ -8,11 +8,6 @@
         <item>민트</item>
     </string-array>
 
-    <array name="image_diary">
-        <item>@drawable/ic_beige</item>
-        <item>@drawable/ic_white</item>
-        <item>@drawable/ic_black</item>
-        <item>@drawable/ic_mint</item>
-    </array>
+
 </resources>
 

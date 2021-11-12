@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         var data = resources.getStringArray(R.array.Color)
         // val imagedata = resources.obtainTypedArray(R.array.image_diary)
+        var list = mutableListOf<Int>()
+
+        list.add(R.drawable.ic_beige)
+        list.add(R.drawable.ic_mint)
 
         var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
         with(binding) {
@@ -33,6 +38,10 @@ class MainActivity : AppCompatActivity() {
 
                      val selected = data.get(position)
                      result.text = selected
+                    if(position!=0){
+                        imageView.setImageResource(list[position-1])
+                    }
+
 
                     when(position){
                         0 -> {
