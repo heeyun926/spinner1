@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-import android.graphics.drawable.Drawable
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -10,17 +10,28 @@ import com.example.myapplication.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         binding =ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val sencondIntent = Intent(this, SubActivity::class.java)
+        binding.button.setOnClickListener{
+            startActivity(sencondIntent)
+        }
 
         var data = resources.getStringArray(R.array.Color)
         // val imagedata = resources.obtainTypedArray(R.array.image_diary)
         var list = mutableListOf<Int>()
 
         list.add(R.drawable.ic_beige)
+        list.add(R.drawable.ic_white)
+        list.add(R.drawable.ic_black)
         list.add(R.drawable.ic_mint)
 
         var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)

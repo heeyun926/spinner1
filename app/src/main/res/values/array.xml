@@ -2,10 +2,10 @@
 <resources>
     <string-array name="Color">
         <item>선택해주세요</item>
-        <item>베이지</item>
-        <item>화이트</item>
-        <item>블랙</item>
-        <item>민트</item>
+        <item>Beige</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>mint</item>
     </string-array>
 
 

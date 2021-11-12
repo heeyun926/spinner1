@@ -27,6 +27,7 @@
 
         <Spinner
             android:id="@+id/spinner"
+            android:background="@drawable/ic_spinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -42,10 +43,22 @@
             android:layout_width="360dp"
             android:layout_height="260dp"
             android:layout_marginTop="30dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner"
+
             />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/nextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

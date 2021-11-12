@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Calendar Color</string>
+    <string name="nextButton">Select Content</string>
 </resources>
