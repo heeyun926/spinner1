@@ -7,16 +7,17 @@
     tools:context=".SubActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/re"
-        android:layout_width="377dp"
-        android:layout_height="729dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-         />
+        tools:listitem="@layout/item_recyclerview" />
 
     <TextView
         android:id="@+id/textView"

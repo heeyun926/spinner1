@@ -1,3 +1,5 @@
 package com.example.myapplication
 
-data class Profiles(val profile : Int, val name : String, val content : String)
+import android.graphics.drawable.Drawable
+
+data class Profiles(val profile : Drawable, val name : String, val content : String)

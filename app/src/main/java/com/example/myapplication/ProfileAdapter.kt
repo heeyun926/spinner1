@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = ItemRecyclerviewBinding.inflate(LayoutInflater.from(parent.context),parent, false)
-        return Holder(binding)
+        return Holder(binding,parent.context)
     }
 
     override fun getItemCount() = profileList.size
@@ -24,10 +25,11 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
         //2. 홀더에 데이터를 전달
         holder.setProfiles(profiles)
     }
-    class Holder(private val binding:ItemRecyclerviewBinding): RecyclerView.ViewHolder(binding.root){
+    class Holder(private val binding:ItemRecyclerviewBinding,val context:Context): RecyclerView.ViewHolder(binding.root){
         fun setProfiles(profiles: Profiles) {
             with(binding){
-                //diary.imageAlpha = "${profiles.profile}"
+                diary.setImageDrawable(profiles.profile)
+                //(context.getDrawable(R.drawable.ic_white))
                 diaryname.text = profiles.name
                 diarycontents.text = profiles.content
             }
