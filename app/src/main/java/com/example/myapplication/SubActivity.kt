@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.ActivitySubBinding
 
@@ -23,10 +25,11 @@ class SubActivity : AppCompatActivity() {
         //3. 화면의 리사이클러뷰와 연
         binding.recyclerView.adapter = adapter
 
-    }
 
-    fun loadData() {
-        val profilesList = mutableListOf<Profiles>()
+
+        fun loadData() {
+            val profilesList = mutableListOf<Profiles>()
+        }
     }
 }
 

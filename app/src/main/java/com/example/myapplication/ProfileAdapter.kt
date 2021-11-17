@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.ItemRecyclerviewBinding
@@ -24,6 +25,9 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
 
         //2. 홀더에 데이터를 전달
         holder.setProfiles(profiles)
+        holder.itemView.setOnClickListener {
+            itemClickListner.onClick(it, position)
+        }
     }
     class Holder(private val binding:ItemRecyclerviewBinding,val context:Context): RecyclerView.ViewHolder(binding.root){
         fun setProfiles(profiles: Profiles) {
@@ -32,8 +36,18 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
                 //(context.getDrawable(R.drawable.ic_white))
                 diaryname.text = profiles.name
                 diarycontents.text = profiles.content
+
+
             }
         }
         //3. 받은 데이터를 화면에 출력
     }
+    //클릭리스너 선언
+    private lateinit var itemClickListner: ItemClickListener
+
+    //클릭리스너 등록 매소드
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
+        this.itemClickListner = itemClickListener
+    }
+
 }
