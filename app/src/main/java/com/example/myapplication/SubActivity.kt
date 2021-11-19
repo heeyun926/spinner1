@@ -13,23 +13,19 @@ class SubActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySubBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //1.데이터 생성 OR 불러오
+        //1.데이터 생성 OR 불러오기 - Profiles데이터를 담을 리스트 생성
         val list = ArrayList<Profiles>()
         list.add(Profiles(getDrawable(R.drawable.ic_white)!!, "1", "ah"))
         list.add(Profiles(getDrawable(R.drawable.ic_beige)!!, "1", "ah"))
         list.add(Profiles(getDrawable(R.drawable.ic_mint)!!, "1", "ah"))
         list.add(Profiles(getDrawable(R.drawable.ic_black)!!, "1", "ah"))
 
-        //2. 어댑터 생
+        //2. 어댑터 생성
         val adapter = ProfileAdapter(list)
-        //3. 화면의 리사이클러뷰와 연
+        //3. 화면의 리사이클러뷰와 연결
         binding.recyclerView.adapter = adapter
 
 
-
-        fun loadData() {
-            val profilesList = mutableListOf<Profiles>()
-        }
     }
 }
 
