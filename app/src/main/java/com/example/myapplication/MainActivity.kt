@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(sencondIntent)
         }
 
-        var data = resources.getStringArray(R.array.Color)
+        val data = resources.getStringArray(R.array.Color)
         // val imagedata = resources.obtainTypedArray(R.array.image_diary)
         var list = mutableListOf<Int>()
 

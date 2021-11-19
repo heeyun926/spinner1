@@ -30,6 +30,8 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
         holder.setProfiles(profiles)
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            intent.putExtra("content", "  ")
+            intent.putExtra("no",111)
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
 
@@ -47,6 +49,7 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
             }
             binding.root.setOnClickListener {
                 Intent(context, DetailActivity::class.java).apply {
+                    //putExtra("content",content.text.toString())
 
                 }
 
@@ -55,7 +58,6 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
         }
         //3. 받은 데이터를 화면에 출력
         //클릭리스너 선언
-
 
         //클릭리스너 등록 매소드
 
