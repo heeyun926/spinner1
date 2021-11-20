@@ -57,9 +57,9 @@ class ProfileAdapter(private val profileList : ArrayList<Profiles>) : RecyclerVi
                 val intent = Intent(context, DetailActivity::class.java)
 
                     //putExtra("content",content.text.toString())
-                    intent.putExtra("name",binding.diaryname.text)
+                    intent.putExtra("name",binding.diaryname.text.toString())
                     //putExtra("no", 111)
-                context.startActivity(intent)
+                    context.startActivity(intent)
         }
 
 
